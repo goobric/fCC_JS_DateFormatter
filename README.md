@@ -21,3 +21,21 @@ element.addEventListener("change", () => {
 
 });
 ```
+
+A <code>switch</code> statement is used to compare an expression against multiple possible values and execute different code blocks based on the match. It's commonly used for branching logic.
+
+For example, here's how to compare the expression <code>dayOfWeek</code> against possible values:
+
+```
+switch (dayOfWeek) {
+  case 1:
+    console.log("It's Monday!");
+    break;
+  case 2:
+    console.log("It's Tuesday!");
+    break;
+  // ...cases for other workdays
+  default:
+    console.log("It's the weekend!");
+}
+```
