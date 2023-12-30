@@ -21,4 +21,30 @@ const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}`;
 console.log(formattedDate);
 currentDateParagraph.textContent = formattedDate;
 
-dateOptionsSelectElement.addEventListener('change', () => {});
+dateOptionsSelectElement.addEventListener('change', () => {
+  switch (dateOptionsSelectElement.value) {
+    case '1':
+      currentDateParagraph.textContent = formattedDate;
+      break;
+    case '2':
+      currentDateParagraph.textContent = `${year}-${month}-${day}`;
+      break;
+    case '3':
+      currentDateParagraph.textContent = `${day}-${month}-${year}`;
+      break;
+    case '4':
+      currentDateParagraph.textContent = `${month}-${day}-${year}`;
+      break;
+    case 'yyyy-mm-dd':
+      currentDateParagraph.textContent = formattedDate
+        .split('-')
+        .reverse()
+        .join('-');
+      break;
+    case 'mm-dd-yyyy-h-mm':
+      currentDateParagraph.textContent = `${month}-${day}-${year} ${hours} Hours ${minutes} Minutes`;
+      break;
+    default:
+      currentDateParagraph.textContent = formattedDate;
+  }
+});
