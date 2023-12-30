@@ -13,3 +13,11 @@ console.log(exampleParagraph.textContent); // "Example Text"
 exampleParagraph.textContent = "New Text";
 console.log(exampleParagraph.textContent); // "New Text"
 ```
+
+In JavaScript, the <code>change</code> event is used to detect when the value of an HTML element has changed:
+
+```
+element.addEventListener("change", () => {
+
+});
+```
